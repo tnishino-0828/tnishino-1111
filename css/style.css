@@ -210,7 +210,7 @@ header div.headerin div.button {
   position: fixed;
   right: 16px;
   top: 12px;
-  background-image: url("img/menu_open_btn.png");
+  background-image: url("../img/menu_open_btn.png");
   background-size: 100px;
   width: 61px;
   height: 61px;
@@ -848,7 +848,7 @@ div.pooloptions div.more a img {
 }
 
 footer {
-  background-image: url("img/footer_background.png");
+  background-image: url("../img/footer_background.png");
   content: "";
   background-size: 100% 100%;
   background-position: center;
