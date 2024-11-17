@@ -153,7 +153,9 @@ header {
       padding: initial;
     }
     div.logo {
-      padding: 32px 0 0 40px;
+      @media (min-width: 768px) {
+        padding: 20px 0 0 40px;
+      }
       a {
         img {
           width: 62px;
@@ -172,7 +174,7 @@ header {
         background-color: #FFFFFF;
         position: absolute;
         right: 0;
-        padding: 24px 98px 24px 228px;
+        padding: 24px 98px 24px 29px;
         @media (min-width: 768px) {
           gap: 30px;
         }
@@ -185,6 +187,11 @@ header {
           line-height: 67px;
           line-height: 38px;
           font-family: "NotoSansJP-Medium";
+          @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+          }
         }
       }
     }
@@ -192,7 +199,7 @@ header {
       position: fixed;
       right: 16px;
       top: 12px;
-      background-image: url('../img/menu_open_btn.png');
+      background-image: url('img/menu_open_btn.png');
       background-size: 100px;
       width: 61px;
       height: 61px;
@@ -220,30 +227,33 @@ header {
         z-index: -1;
         box-shadow: 0px 0px 0px .5;
       }
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
 
-div.sidebar_sns {
-  position: fixed;
-  right: 28px;
-  top: 90px; 
-  z-index: 1;
-  display: block;
-  width: 32px;
-  @media (min-width: 768px) {
-    right: 20px;
-    top: 20%;
-    width: 50px;
-  }
-  a {
-    display: block;
-    img {}
-    &:nth-child(2) {
-      margin-top: 8px;
-    }
-  }
-}
+// div.sidebar_sns {
+//   position: fixed;
+//   right: 28px;
+//   top: 90px; 
+//   z-index: 1;
+//   display: block;
+//   width: 32px;
+//   @media (min-width: 768px) {
+//     right: 20px;
+//     top: 20%;
+//     width: 50px;
+//   }
+//   a {
+//     display: block;
+//     img {}
+//     &:nth-child(2) {
+//       margin-top: 8px;
+//     }
+//   }
+// }
 
 div.fix_link {
   position: fixed;
@@ -408,7 +418,7 @@ div.pooloptions {
       position: relative;
       div.title {
         font-size: 15px;
-        font-weight: 600;
+        font-weight: 400;
         letter-spacing: 4.9px;
         line-height: 19px;
         color: #FFFFFF;
@@ -455,10 +465,14 @@ div.pooloptions {
       margin-top: 130px;
     }
     div.container {
+      @media (min-width: 768px) {
+        width: 1116px;
+      }
       div.title {
         text-align: center;
         span.english {
           font-size: 13px;
+          font-weight: 500;
           letter-spacing: 0.65px;
           line-height: 72px;
           line-height: 32px;
@@ -505,7 +519,7 @@ div.pooloptions {
       div.slide-wrapper {
         margin-top: 40px;
         @media (min-width: 768px) {
-          margin-top: 80px;
+          margin-top: 64px;
         }
         div.swiper {
           div.swiper-wrapper {
@@ -523,9 +537,17 @@ div.pooloptions {
           div.swiper-wrapper {
             div.swiper-slide {
               opacity: .5;
-              img {}
+              img {
+                object-fit: cover;
+                @media (min-width: 768px) {
+                  height: 235px;
+                }
+              }
               &.swiper-slide-thumb-active {
                 opacity: 1;
+              }
+              &:hover {
+                cursor: pointer;
               }
             }
           }
@@ -560,12 +582,12 @@ div.pooloptions {
       border: 2px solid #3D4D7A;
       padding: 24px 16px;
       @media (min-width: 768px) {
-        padding: 32px 48px;
+        padding: 32px 22px 17px 48px;
       }
       div.message {
         font-size: 20px;
         font-weight: 600;
-        letter-spacing: 2.6px;
+        letter-spacing: 2.9px;
         line-height: 28px;
         font-family: "ShipporiMincho-Regular", serif;
         color: #020F34;
@@ -580,7 +602,7 @@ div.pooloptions {
           display: flex;
           // justify-content: center;
           align-items: center;
-          gap: 80px;
+          gap: 70px;
         }
         div.text {
           font-weight: 500;
@@ -589,16 +611,18 @@ div.pooloptions {
           line-height: 28px;
           font-family: "ShipporiMincho-Regular", serif;
           color: #020F34;
+          @media (min-width: 768px) {
+            flex: 1;
+          }
         }
         div.logo {
           text-align: center;
           margin-top: 8px;
           @media (min-width: 768px) {
+            width: 40%;
             margin-top: initial;
           }
-          img {
-            width: 250px;
-          }
+          img {}
         }
       }
     }
@@ -611,7 +635,7 @@ div.pooloptions {
   section.feature {
     margin-top: 48px;
     @media (min-width: 768px) {
-      margin-top: 130px;
+      margin-top: 97px;
     }
     div.title {
       text-align: center;
@@ -665,13 +689,13 @@ div.pooloptions {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 80px;
+        margin-top: 64px;
       }
       div.boxtop, div.boxbottom {
         div.item {
           background-color: #FFFFFF;
           position: relative;
-          padding: 32px 24px;
+          padding: 35px 20px 28px;
           @media (min-width: 768px) {
             width: 48%;
           }
@@ -684,9 +708,15 @@ div.pooloptions {
             opacity: .2;
             position: absolute;
             right: 10px;
-            top: -10px;
+            top: -16px;
+            @media (min-width: 768px) {
+              font-size: 20px;
+            }
             span.number {
               font-size: 35px;
+              @media (min-width: 768px) {
+                font-size: 40px;
+              }
             }
           }
           div.image {
@@ -706,6 +736,7 @@ div.pooloptions {
                 color: #020F34;
                 border-bottom: 1px dashed #020F34;
                 padding-bottom: 16px;
+                padding-left: 8px;
               }
               dd {
                 font-size: 15px;
@@ -713,6 +744,7 @@ div.pooloptions {
                 line-height: 26px;
                 color: #020F34;
                 margin-top: 16px;
+                padding-left: 4px;
               }
             }
           }
@@ -732,7 +764,7 @@ div.pooloptions {
         div.item {
           @media (min-width: 768px) {
             display: flex;
-            gap: 29px;
+            gap: 20px;
           }
           div.image {
             width: 75%;
@@ -786,7 +818,7 @@ div.pooloptions {
 }
 
 footer {
-  background-image: url('../img/footer_background.png');
+  background-image: url('img/footer_background.png');
   content: "";
   background-size: 100% 100%;
   background-position: center;
@@ -885,7 +917,7 @@ footer {
         @media (min-width: 768px) {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 16px 23px;
+          gap: 16px 21px;
         }
         li {
           div.name {
@@ -914,6 +946,7 @@ footer {
             color: #B0B5C4;
             margin-top: 7px;
             margin-bottom: 0;
+            white-space: nowrap;
           }
           div.tel_sns {
             display: flex;
@@ -981,38 +1014,41 @@ footer {
       padding: 0 30px;
       @media (min-width: 768px) {
         display: flex;
-        justify-items: flex-start;
+        align-items: center;
+        // justify-items: flex-start;
         margin-top: 54px;
         padding: initial;
       }
       div.lists {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 20px 42px;
         @media (min-width: 768px) {
           flex-wrap: initial;
-          justify-content: initial;
           align-items: center;
         }
         div.item {
           width: 40%;
           @media (min-width: 768px) {
-            width: 15%;
+            width: 9%;
           }
           img {
             width: 100%;
             @media (min-width: 768px) {}
           }
         }
-      }
-      span {
-        letter-spacing: 0.64px;
-        line-height: 32px;
-        color: #FFFFFF;
-        text-align: center;
-        display: block;
-        margin-top: 20px;
+        span {
+          letter-spacing: 0.64px;
+          line-height: 32px;
+          color: #FFFFFF;
+          text-align: center;
+          display: block;
+          margin-top: 20px;
+          @media (min-width: 768px) {
+            margin-top: initial;
+          }
+        }
       }
     }
     &.container {

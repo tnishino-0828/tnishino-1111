@@ -159,8 +159,10 @@ header div.headerin {
     padding: initial;
   }
 }
-header div.headerin div.logo {
-  padding: 32px 0 0 40px;
+@media (min-width: 768px) {
+  header div.headerin div.logo {
+    padding: 20px 0 0 40px;
+  }
 }
 header div.headerin div.logo a img {
   width: 62px;
@@ -181,7 +183,7 @@ header div.headerin div.mess {
     background-color: #FFFFFF;
     position: absolute;
     right: 0;
-    padding: 24px 98px 24px 228px;
+    padding: 24px 98px 24px 29px;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
@@ -197,11 +199,18 @@ header div.headerin div.mess div.item a {
   line-height: 38px;
   font-family: "NotoSansJP-Medium";
 }
+@media (min-width: 768px) {
+  header div.headerin div.mess div.item a {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+}
 header div.headerin div.button {
   position: fixed;
   right: 16px;
   top: 12px;
-  background-image: url("../img/menu_open_btn.png");
+  background-image: url("img/menu_open_btn.png");
   background-size: 100px;
   width: 61px;
   height: 61px;
@@ -225,27 +234,8 @@ header div.headerin div.button::before {
   z-index: -1;
   box-shadow: 0px 0px 0px 0.5;
 }
-
-div.sidebar_sns {
-  position: fixed;
-  right: 28px;
-  top: 90px;
-  z-index: 1;
-  display: block;
-  width: 32px;
-}
-@media (min-width: 768px) {
-  div.sidebar_sns {
-    right: 20px;
-    top: 20%;
-    width: 50px;
-  }
-}
-div.sidebar_sns a {
-  display: block;
-}
-div.sidebar_sns a:nth-child(2) {
-  margin-top: 8px;
+header div.headerin div.button:hover {
+  cursor: pointer;
 }
 
 div.fix_link {
@@ -418,7 +408,7 @@ div.pooloptions section.recommend div.information {
 }
 div.pooloptions section.recommend div.information div.title {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 4.9px;
   line-height: 19px;
   color: #FFFFFF;
@@ -469,11 +459,17 @@ div.pooloptions section.plan {
     margin-top: 130px;
   }
 }
+@media (min-width: 768px) {
+  div.pooloptions section.plan div.container {
+    width: 1116px;
+  }
+}
 div.pooloptions section.plan div.container div.title {
   text-align: center;
 }
 div.pooloptions section.plan div.container div.title span.english {
   font-size: 13px;
+  font-weight: 500;
   letter-spacing: 0.65px;
   line-height: 72px;
   line-height: 32px;
@@ -527,7 +523,7 @@ div.pooloptions section.plan div.container div.slide-wrapper {
 }
 @media (min-width: 768px) {
   div.pooloptions section.plan div.container div.slide-wrapper {
-    margin-top: 80px;
+    margin-top: 64px;
   }
 }
 div.pooloptions section.plan div.container div.slide-wrapper div.swiper div.swiper-wrapper div.swiper-slide {
@@ -544,8 +540,19 @@ div.pooloptions section.plan div.container div.slide-wrapper div.slider-thumbnai
 div.pooloptions section.plan div.container div.slide-wrapper div.slider-thumbnail div.swiper-wrapper div.swiper-slide {
   opacity: 0.5;
 }
+div.pooloptions section.plan div.container div.slide-wrapper div.slider-thumbnail div.swiper-wrapper div.swiper-slide img {
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  div.pooloptions section.plan div.container div.slide-wrapper div.slider-thumbnail div.swiper-wrapper div.swiper-slide img {
+    height: 235px;
+  }
+}
 div.pooloptions section.plan div.container div.slide-wrapper div.slider-thumbnail div.swiper-wrapper div.swiper-slide.swiper-slide-thumb-active {
   opacity: 1;
+}
+div.pooloptions section.plan div.container div.slide-wrapper div.slider-thumbnail div.swiper-wrapper div.swiper-slide:hover {
+  cursor: pointer;
 }
 div.pooloptions section.plan div.slide_bg {
   position: absolute;
@@ -583,13 +590,13 @@ div.pooloptions div.banner div.box {
 }
 @media (min-width: 768px) {
   div.pooloptions div.banner div.box {
-    padding: 32px 48px;
+    padding: 32px 22px 17px 48px;
   }
 }
 div.pooloptions div.banner div.box div.message {
   font-size: 20px;
   font-weight: 600;
-  letter-spacing: 2.6px;
+  letter-spacing: 2.9px;
   line-height: 28px;
   font-family: "ShipporiMincho-Regular", serif;
   color: #020F34;
@@ -607,7 +614,7 @@ div.pooloptions div.banner div.box div.detail {
   div.pooloptions div.banner div.box div.detail {
     display: flex;
     align-items: center;
-    gap: 80px;
+    gap: 70px;
   }
 }
 div.pooloptions div.banner div.box div.detail div.text {
@@ -618,17 +625,20 @@ div.pooloptions div.banner div.box div.detail div.text {
   font-family: "ShipporiMincho-Regular", serif;
   color: #020F34;
 }
+@media (min-width: 768px) {
+  div.pooloptions div.banner div.box div.detail div.text {
+    flex: 1;
+  }
+}
 div.pooloptions div.banner div.box div.detail div.logo {
   text-align: center;
   margin-top: 8px;
 }
 @media (min-width: 768px) {
   div.pooloptions div.banner div.box div.detail div.logo {
+    width: 40%;
     margin-top: initial;
   }
-}
-div.pooloptions div.banner div.box div.detail div.logo img {
-  width: 250px;
 }
 @media (min-width: 768px) {
   div.pooloptions div.banner.container {
@@ -640,7 +650,7 @@ div.pooloptions section.feature {
 }
 @media (min-width: 768px) {
   div.pooloptions section.feature {
-    margin-top: 130px;
+    margin-top: 97px;
   }
 }
 div.pooloptions section.feature div.title {
@@ -703,13 +713,13 @@ div.pooloptions section.feature div.lists {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 64px;
   }
 }
 div.pooloptions section.feature div.lists div.boxtop div.item, div.pooloptions section.feature div.lists div.boxbottom div.item {
   background-color: #FFFFFF;
   position: relative;
-  padding: 32px 24px;
+  padding: 35px 20px 28px;
 }
 @media (min-width: 768px) {
   div.pooloptions section.feature div.lists div.boxtop div.item, div.pooloptions section.feature div.lists div.boxbottom div.item {
@@ -725,10 +735,20 @@ div.pooloptions section.feature div.lists div.boxtop div.item div.count, div.poo
   opacity: 0.2;
   position: absolute;
   right: 10px;
-  top: -10px;
+  top: -16px;
+}
+@media (min-width: 768px) {
+  div.pooloptions section.feature div.lists div.boxtop div.item div.count, div.pooloptions section.feature div.lists div.boxbottom div.item div.count {
+    font-size: 20px;
+  }
 }
 div.pooloptions section.feature div.lists div.boxtop div.item div.count span.number, div.pooloptions section.feature div.lists div.boxbottom div.item div.count span.number {
   font-size: 35px;
+}
+@media (min-width: 768px) {
+  div.pooloptions section.feature div.lists div.boxtop div.item div.count span.number, div.pooloptions section.feature div.lists div.boxbottom div.item div.count span.number {
+    font-size: 40px;
+  }
 }
 div.pooloptions section.feature div.lists div.boxtop div.item div.image, div.pooloptions section.feature div.lists div.boxbottom div.item div.image {
   text-align: center;
@@ -747,6 +767,7 @@ div.pooloptions section.feature div.lists div.boxtop div.item div.text dl dt, di
   color: #020F34;
   border-bottom: 1px dashed #020F34;
   padding-bottom: 16px;
+  padding-left: 8px;
 }
 div.pooloptions section.feature div.lists div.boxtop div.item div.text dl dd, div.pooloptions section.feature div.lists div.boxbottom div.item div.text dl dd {
   font-size: 15px;
@@ -754,6 +775,7 @@ div.pooloptions section.feature div.lists div.boxtop div.item div.text dl dd, di
   line-height: 26px;
   color: #020F34;
   margin-top: 16px;
+  padding-left: 4px;
 }
 div.pooloptions section.feature div.lists div.boxtop div.item + .item, div.pooloptions section.feature div.lists div.boxbottom div.item + .item {
   margin-top: 48px;
@@ -772,7 +794,7 @@ div.pooloptions section.feature div.lists div.boxtop div.item + .item, div.poolo
 @media (min-width: 768px) {
   div.pooloptions section.feature div.lists div.boxtop div.item {
     display: flex;
-    gap: 29px;
+    gap: 20px;
   }
 }
 div.pooloptions section.feature div.lists div.boxtop div.item div.image {
@@ -826,7 +848,7 @@ div.pooloptions div.more a img {
 }
 
 footer {
-  background-image: url("../img/footer_background.png");
+  background-image: url("img/footer_background.png");
   content: "";
   background-size: 100% 100%;
   background-position: center;
@@ -932,7 +954,7 @@ footer div.menubox div.address ul.shop_lists {
   footer div.menubox div.address ul.shop_lists {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px 23px;
+    gap: 16px 21px;
   }
 }
 footer div.menubox div.address ul.shop_lists li div.name {
@@ -961,6 +983,7 @@ footer div.menubox div.address ul.shop_lists li address {
   color: #B0B5C4;
   margin-top: 7px;
   margin-bottom: 0;
+  white-space: nowrap;
 }
 footer div.menubox div.address ul.shop_lists li div.tel_sns {
   display: flex;
@@ -1028,7 +1051,7 @@ footer div.menubox div.company_logo {
 @media (min-width: 768px) {
   footer div.menubox div.company_logo {
     display: flex;
-    justify-items: flex-start;
+    align-items: center;
     margin-top: 54px;
     padding: initial;
   }
@@ -1036,13 +1059,12 @@ footer div.menubox div.company_logo {
 footer div.menubox div.company_logo div.lists {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px 42px;
 }
 @media (min-width: 768px) {
   footer div.menubox div.company_logo div.lists {
     flex-wrap: initial;
-    justify-content: initial;
     align-items: center;
   }
 }
@@ -1051,19 +1073,24 @@ footer div.menubox div.company_logo div.lists div.item {
 }
 @media (min-width: 768px) {
   footer div.menubox div.company_logo div.lists div.item {
-    width: 15%;
+    width: 9%;
   }
 }
 footer div.menubox div.company_logo div.lists div.item img {
   width: 100%;
 }
-footer div.menubox div.company_logo span {
+footer div.menubox div.company_logo div.lists span {
   letter-spacing: 0.64px;
   line-height: 32px;
   color: #FFFFFF;
   text-align: center;
   display: block;
   margin-top: 20px;
+}
+@media (min-width: 768px) {
+  footer div.menubox div.company_logo div.lists span {
+    margin-top: initial;
+  }
 }
 @media (min-width: 768px) {
   footer div.menubox.container {
