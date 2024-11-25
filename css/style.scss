@@ -156,11 +156,17 @@ header {
       @media (min-width: 768px) {
         padding: 20px 0 0 40px;
       }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        padding: 16px 0 0 24px;
+      }
       a {
         img {
           width: 62px;
           @media (min-width: 768px) {
             width: 130px;
+          }
+          @media (min-width: 768px) and (max-width: 991.98px) {
+            width: 100px;
           }
         }
       }
@@ -382,6 +388,9 @@ div.pooloptions {
         letter-spacing: 3px;
         line-height: 36px;
         line-height: 18px;
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
       }
     }
   }
@@ -849,6 +858,11 @@ footer {
           display: flex;
           gap: 24px;
         }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 32px 24px;
+        }
         li {
           @media (min-width: 768px) {
             flex: 1;
@@ -919,6 +933,9 @@ footer {
           grid-template-columns: repeat(3, 1fr);
           gap: 16px 21px;
         }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
         li {
           div.name {
             letter-spacing: 1.28px;
@@ -946,7 +963,12 @@ footer {
             color: #B0B5C4;
             margin-top: 7px;
             margin-bottom: 0;
-            white-space: nowrap;
+            @media (min-width: 768px) {
+              white-space: nowrap;
+            }
+            @media (min-width: 768px) and (max-width: 991.98px) {
+              white-space: initial;
+            }
           }
           div.tel_sns {
             display: flex;

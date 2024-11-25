@@ -164,12 +164,22 @@ header div.headerin {
     padding: 20px 0 0 40px;
   }
 }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header div.headerin div.logo {
+    padding: 16px 0 0 24px;
+  }
+}
 header div.headerin div.logo a img {
   width: 62px;
 }
 @media (min-width: 768px) {
   header div.headerin div.logo a img {
     width: 130px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header div.headerin div.logo a img {
+    width: 100px;
   }
 }
 header div.headerin div.mess {
@@ -368,6 +378,9 @@ div.pooloptions div.breadcrumbs div.inner span.name {
   letter-spacing: 3px;
   line-height: 36px;
   line-height: 18px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
 }
 div.pooloptions div.heading {
   margin-top: 40px;
@@ -883,6 +896,13 @@ footer div.menubox nav.footerin {
     gap: 24px;
   }
 }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  footer div.menubox nav.footerin ul.lists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 24px;
+  }
+}
 @media (min-width: 768px) {
   footer div.menubox nav.footerin ul.lists li {
     flex: 1;
@@ -957,6 +977,11 @@ footer div.menubox div.address ul.shop_lists {
     gap: 16px 21px;
   }
 }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  footer div.menubox div.address ul.shop_lists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 footer div.menubox div.address ul.shop_lists li div.name {
   letter-spacing: 1.28px;
   line-height: 36px;
@@ -983,7 +1008,16 @@ footer div.menubox div.address ul.shop_lists li address {
   color: #B0B5C4;
   margin-top: 7px;
   margin-bottom: 0;
-  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  footer div.menubox div.address ul.shop_lists li address {
+    white-space: nowrap;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  footer div.menubox div.address ul.shop_lists li address {
+    white-space: initial;
+  }
 }
 footer div.menubox div.address ul.shop_lists li div.tel_sns {
   display: flex;
